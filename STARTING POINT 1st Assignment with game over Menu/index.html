@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Animating balls and adding input fields</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/game.js"></script>
+</head>
+
+<body>
+  <div id="leftMenu">
+    <div id="controls">
+      <h3>SETTINGS</h3>
+
+      <button onclick="ruleDisplay()">Display Rules and Tips</button>
+      <p></p>
+
+      <label for="nbBalls">Number of balls: </label>
+      <input type="number" min=1 max=30 value=10 id="nbBalls" oninput="changeNbBalls(this.value);">
+      <p></p>
+
+      <label for="heroChooser">Personnage: </label>
+      <select oninput="changePlayerHero(this.value);" id="heroChooser">
+        <option value='Mario.png'>Mario</option>
+        <option value='Luigi.png'>Luigi</option>
+      </select>
+      <p></p>
+
+      <label for="minionChooser">Ennemis: </label>
+      <select oninput="changeMinions(this.value);" id="minionChooser">
+        <option value='Gumba.png'>Gumba</option>
+        <option value='Boo.png'>Boo</option>
+      </select>
+      <p></p>
+
+      <label for="EnvChooser">Environnement: </label>
+      <select oninput="changeEnv(this.value);" id="EnvChooser">
+        <option value='prairie'>prairie</option>
+        <option value='usine'>usine</option>
+      </select>
+      <p></p>
+
+      <label for="ballSpeed">Change ball speed: </label>
+        <input type="range" value='0.5' min='0.1' max='2' step='0.1' oninput="changeBallSpeed(this.value);" id="ballSpeed"> +
+      <p></p>
+
+      <label for="delayFireball">Change delay beetween fireballs: </label>
+      - <input type="range" value='30' min='5' max='100' step=5 oninput="changeDelayFireball(this.value);" id="delayFireball"> +
+      <p></p>
+
+    </div>
+    <div id="leaderboard">
+      <h3>LEADERBOARD</h3>
+      <p id="leaderScores"></p>
+    </div>
+  </div>
+  <canvas id="myCanvas" width="800" height="600"></canvas>
+</body>
+
+</html>
