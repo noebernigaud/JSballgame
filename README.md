@@ -1,4 +1,4 @@
-This game was programmed as an improvement to the game made in the module 2 of the javascript course. Here is a list of improvement that I made.
+This game was programmed as an improvement to the game made in the module 2 of the javascript course. Here is a list of improvements that I made.
 
 ### Features
 
